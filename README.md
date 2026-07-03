@@ -36,6 +36,6 @@ select * from emp where mgr is null;
 4) List the employee where salary is between 2000 and 3000.
 
 select * from emp
-                                         -> where sal between 2000 and 1000;
+-> where sal between 2000 and 1000;
 Empty set (0.0017 sec)
 
