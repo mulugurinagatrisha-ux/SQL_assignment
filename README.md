@@ -39,3 +39,59 @@ select * from emp
 -> where sal between 2000 and 1000;
 Empty set (0.0017 sec)
 
+
+5) List all the salesman in department number 30 and having salary greater than 5000.
+
+select * from emp
+-> where deptno=30
+-> and sal >5000;
+Empty set (0.0090 sec)
+
+
+6) List all the employees who are having reporting manager in department 10.
+
+ select * from emp
+ -> where mgr is not null
+ -> and deptno=10;
++-------+--------+---------+------+------------+---------+------+--------+
+| EMPNO | ENAME  | JOB     | MGR  | HIREDATE   | SAL     | COMM | DEPTNO |
++-------+--------+---------+------+------------+---------+------+--------+
+|  7782 | CLARK  | MANAGER | 7839 | 1981-06-09 | 2450.00 | 0.00 |     10 |
+|  7934 | MILLER | CLERK   | 7782 | 1982-01-23 | 1300.00 | 0.00 |     10 |
++-------+--------+---------+------+------------+---------+------+--------+
+2 rows in set (0.0012 sec)
+
+
+7) Write a Query to display all the details of the employee if their job is having one _
+(underscore) in it.
+
+ select * from emp
+-> where job LIKE
+-> '%@_%' ESCAPE '@';
+Empty set (0.0065 sec)
+
+
+8) Write a Query to display who are having % in their names.
+
+select * from emp where ename like '\%\' escape';
+Empty set (0.0010 sec)
+
+9) Write a Query to display who are having _(underscore) as second character in their name.
+
+ select * from emp
+-> where ename like '@_%' escape '@';
+Empty set (0.0018 sec)
+
+10) Write a Query to display all the employee who are getting some comm with their
+designation is neither manager nor analyst.
+
+ SELECT * FROM emp WHERE comm IS NULL AND job NOT IN ('MANAGER', 'ANALYST');
+Empty set (0.0016 sec)
+
+11) Write a Query to display all the manager whose annual salary is ending with 0.
+
+
+
+
+
+
